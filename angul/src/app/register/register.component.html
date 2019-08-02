@@ -1,0 +1,22 @@
+<form method="POST" (ngSubmit)="onSubmit()">
+<mat-card>
+    <mat-form-field>
+      <input  matInput [(ngModel)]="obj.username" name="username" placeholder="Enter your username" [type]="'text'" [formControl]="username" required>
+      <mat-error *ngIf="username.invalid">{{getErrorMessage()}}</mat-error>
+    </mat-form-field>
+    
+    <mat-form-field>
+      <input matInput placeholder="Enter your password" name="password" [(ngModel)]="obj.password" [type]="hide ? 'password' : 'text'" required>
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput placeholder="confirm your password" name="confirmpassword" [(ngModel)]="obj.confirmpassword" [type]="nhide ? 'password' : 'text'">
+        <button mat-icon-button matSuffix (click)="nhide = !nhide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="nhide">
+        <mat-icon>{{nhide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button> 
+      </mat-form-field>
+      <button  mat-raised-button >Login</button>
+  </mat-card>
+</form>

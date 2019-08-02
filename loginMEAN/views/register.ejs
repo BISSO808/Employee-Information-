@@ -1,0 +1,21 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <% errors.forEach(function(error){ %>
+            <li><%= error.msg %></li>
+          <% }) %>
+        <form method="POST" action="register/submit">
+                username:
+                <input type="text" name="username"><br>
+                password:
+                <input type="password" name="password"><br>
+                re-enter password:
+                <input type="password" name="confirmpassword">
+                <button type="submit" name="submit">
+submit
+                </button>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,11 @@
+<div class="container">
+
+    <button color="primary" mat-raised-button [matMenuTriggerFor]="menu">Menu</button>
+    <mat-menu #menu="matMenu">
+    
+      <button routerLink="/form" routerLinkActive="active" mat-menu-item>form</button>
+      <button routerLink="/register" routerLinkActive="active" mat-menu-item>Register</button>
+      <button routerLink="/employeelist" routerLinkActive="active" mat-menu-item>employee List</button>
+      <button routerLink="/login" routerLinkActive="active" mat-menu-item>login</button>
+    </mat-menu>
+    </div>
