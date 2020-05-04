@@ -5,7 +5,7 @@ const cors = require('cors')
 const path = require('path');
 const bodyParser= require('body-parser');
 const mongoose=require('mongoose');
-const url='mongodb+srv://admin:admin@cluster0-rax9a.mongodb.net/test?retryWrites=true&w=majority';
+const url='URL'
 const expressValidator = require('express-validator');
 const flash=require('connect-flash');
 const session = require('express-session');
